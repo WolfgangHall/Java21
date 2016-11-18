@@ -1,0 +1,27 @@
+class MarsApplication {
+    public static void main(String args[]){
+        MarsRobot spirit = new MarsRobot();
+        spirit.status = "exploring";
+        spirit.speed = 2;
+        spirit.temperature = -60;
+        
+        MarsRobot voyager = new MarsRobot();
+        voyager.status = "wandering";
+        voyager.speed = 3;
+        voyager.temperature = -80;
+        
+        voyager.showAttributes();
+        
+        spirit.showAttributes();
+        System.out.println("Increasing speed to 3.");
+        spirit.speed = 3;
+        spirit.showAttributes();
+        System.out.println("Changing temperature to -90.");
+        spirit.temperature = -90;
+        spirit.showAttributes();
+        System.out.println("Checking the temperature.");
+        spirit.checkTemperature();
+        spirit.showAttributes();
+    }
+    
+}
